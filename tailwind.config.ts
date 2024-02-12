@@ -6,6 +6,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {},
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/typography')],
+  darkMode: 'class',
 }
 export default config

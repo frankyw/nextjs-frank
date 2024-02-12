@@ -39,7 +39,7 @@ function RenderPage({page}: {page: Page}) {
   return (
     <main className="flex flex-col gap-8">
       <article>
-        <h1 dangerouslySetInnerHTML={{__html: page.title}} />
+        <h2 dangerouslySetInnerHTML={{__html: page.title}} />
         <div dangerouslySetInnerHTML={{__html: page.content}} />
       </article>
     </main>
@@ -52,7 +52,7 @@ function RenderPage({page}: {page: Page}) {
 function RenderPostsList({posts, context}: {posts: Post[]; context: string}) {
   return (
     <main className="flex flex-col gap-8">
-      <h1 className="capitalize">Latest {context}</h1>
+      <h2 className="capitalize">Latest {context}</h2>
       <div className="flex flex-wrap gap-8">
         {posts.map((post: Post) => (
           <article className="w-72" key={post.databaseId}>
@@ -64,7 +64,7 @@ function RenderPostsList({posts, context}: {posts: Post[]; context: string}) {
               priority={true}
             />
             <Link href={`/${context}/${post.slug}`}>
-              <h2 dangerouslySetInnerHTML={{__html: post.title}} />
+              <h3 dangerouslySetInnerHTML={{__html: post.title}} />
             </Link>
             <p className="text-sm text-gray-500">
               {post.commentCount} Comments

@@ -21,8 +21,8 @@ export const metadata: Metadata = {
  * @see https://nextjs.org/docs/app/api-reference/functions/generate-viewport
  */
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#18181b'
+  colorScheme: 'light',
+  themeColor: '#cedff5'
 }
 
 /**

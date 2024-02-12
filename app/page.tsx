@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
 
+const revalidate = 0;
 /**
  * The homepage route.
  *
@@ -12,7 +13,7 @@ import {notFound} from 'next/navigation'
  */
 export default async function Home() {
   // Fetch homepage from WordPress.
-  const homepage = await getPageBySlug('homepage')
+  const homepage = await getPageBySlug('welcome')
 
   // Fetch posts from WordPress.
   const posts = await getAllPosts()
@@ -25,11 +26,11 @@ export default async function Home() {
   return (
     <main className="flex flex-col gap-8">
       <article>
-        <h1 dangerouslySetInnerHTML={{__html: homepage.title}} />
+        <h2 dangerouslySetInnerHTML={{__html: homepage.title}} />
         <div dangerouslySetInnerHTML={{__html: homepage.content}} />
       </article>
 
-      <aside>
+      {/* <aside>
         <h2>Latest Posts</h2>
         <div className="flex flex-wrap gap-8">
           {posts.map((post: Post) => (
@@ -54,7 +55,8 @@ export default async function Home() {
             </article>
           ))}
         </div>
-      </aside>
+      </aside> */}
+      
     </main>
   )
 }

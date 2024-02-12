@@ -1,18 +1,15 @@
 {
-  "name": "nextjs-wordpress",
-  "version": "2.0.0",
-  "description": "💀 It's headless WordPress!",
+  "name": "nextjs-frank",
+  "version": "1.0.0",
+  "description": "💀 Frank headless Wordpress",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregrickaby/nextjs-wordpress.git"
+    "url": "git+https://github.com/frankyw/nextjs-frank"
   },
-  "author": "Greg Rickaby <greg@gregrickaby.com>",
+  "author": "Frank W",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gregrickaby/nextjs-wordpress/issues"
-  },
-  "homepage": "https://github.com/gregrickaby/nextjs-wordpress#readme",
+  "homepage": "https://github.com/frankyw/nextjs-frank#readme",
   "scripts": {
     "build": "next build",
     "clean": "rimraf .next",

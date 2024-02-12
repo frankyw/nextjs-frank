@@ -1,7 +1,7 @@
 const config = {
-  siteName: 'Next.js WordPress',
-  siteDescription: "It's headless WordPress!",
-  siteUrl: 'https://nextjswp.com'
+  siteName: 'Frank W',
+  siteDescription: "The personal website of Frank Whitestone",
+  siteUrl: 'https://frankw.net'
 }
 
 export default config
