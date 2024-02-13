@@ -6,7 +6,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '*.frankw.**'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'secure.gravatar.com',
+      },
     ]
   },
   logging: {

@@ -4,6 +4,8 @@ import getPostBySlug from '@/lib/queries/getPostBySlug'
 import {Metadata} from 'next'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
+import trackback from '@/public/link.svg'
+import Image from 'next/image'
 
 /**
  * Generate the static routes at build time.
@@ -102,13 +104,14 @@ export default async function Post({params}: {params: {slug: string}}) {
         {post.comments.nodes.map((comment) => (
           <article key={comment.databaseId}>
             <header className="flex items-center gap-2">
-              <img
+
+              <Image
                 alt={comment.author.node.name}
-                className="m-0 rounded-full"
                 height={64}
-                loading="lazy"
-                src={comment.author.node.avatar.url}
                 width={64}
+                loading="lazy"
+                src={comment.author.node.avatar ? comment.author.node.avatar.url : trackback}
+                className="m-0 rounded-full"
               />
               <div className="flex flex-col gap-2">
                 <h4
