@@ -24,7 +24,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="flex flex-col gap-8">
+    <main className="container mx-auto">
       <article>
         <h2 dangerouslySetInnerHTML={{__html: homepage.title}} />
         <div dangerouslySetInnerHTML={{__html: homepage.content}} />
